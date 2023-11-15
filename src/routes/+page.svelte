@@ -45,7 +45,7 @@
     <strong>
         Vercel has a limit of 4.5mb for uploading files (this applies to all
         plans). Try uploading a file that's at least 5mb. It's going to cause an
-        error
+        error.
     </strong>
 </div>
 
