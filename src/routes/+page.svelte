@@ -43,10 +43,9 @@
 </p>
 <div class="input">
     <strong>
-        Vercel has a limit of 4.5mb when uploading files (this applies to all
-        plans). If you upload a file below 4.5mb, it should work fine. However,
-        try uploading a file that's at least 5mb. You will soon find out that
-        it's not going to work.
+        Vercel has a limit of 4.5mb for uploading files (this applies to all
+        plans). Try uploading a file that's at least 5mb. It's going to cause an
+        error
     </strong>
 </div>
 
