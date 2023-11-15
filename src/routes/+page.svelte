@@ -30,6 +30,7 @@
 
         if (!resRaw.ok || resRaw.status === 413) {
             message = "Not success";
+            return;
         }
 
         message = "Success";
