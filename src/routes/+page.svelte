@@ -37,20 +37,46 @@
     };
 </script>
 
-<p>
-    FILE UPLOAD TEST BY JC SERVO (DONT MIND THE DESIGN THIS IS JUST FOR TESTING
-    PURPOSES)
+<p class="header input">
+    FILE UPLOAD TEST BY JC SERVO
+    <i> (DONT MIND THE DESIGN THIS IS JUST FOR TESTING PURPOSES) </i>
 </p>
 
 {#if message !== ""}
-    <p>Message: {message}</p>
+    <p class="{message === 'Success' ? 'success' : 'error'} input text-color">
+        Message: {message}
+    </p>
 {/if}
 
-<p>API:</p>
-<input on:change={onChange} type="file" />
+<p>API <i>(Use this to test a POST request on an API)</i>:</p>
+<input on:change={onChange} class="input" type="file" />
 
-<p>Form Actions:</p>
+<p>Form Actions <i>(Use this to test a Form Action on Sveltekit)</i>:</p>
 <form method="POST" enctype="multipart/form-data" use:enhance={onEnhance}>
     <input name="fileUpload" type="file" />
     <button type="submit">SUBMIT</button>
 </form>
+
+<style>
+    .success {
+        background-color: green;
+    }
+
+    .error {
+        background-color: red;
+    }
+
+    .header {
+        border-bottom: 1px solid black;
+    }
+
+    .text-color {
+        color: white;
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .input {
+        margin-bottom: 40px;
+    }
+</style>
