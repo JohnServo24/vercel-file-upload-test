@@ -37,10 +37,18 @@
     };
 </script>
 
-<p class="header input">
+<p class="header">
     FILE UPLOAD TEST BY JC SERVO
     <i> (DONT MIND THE DESIGN THIS IS JUST FOR TESTING PURPOSES) </i>
 </p>
+<div class="input">
+    <strong>
+        Vercel has a limit of 4.5mb when uploading files (this applies to all
+        plans). If you upload a file below 4.5mb, it should work fine. However,
+        try uploading a file that's at least 5mb. You will soon find out that
+        it's not going to work.
+    </strong>
+</div>
 
 {#if message !== ""}
     <p class="{message === 'Success' ? 'success' : 'error'} input text-color">
@@ -48,14 +56,25 @@
     </p>
 {/if}
 
-<p>API <i>(Use this to test a POST request on an API)</i>:</p>
-<input on:change={onChange} class="input" type="file" />
-
-<p>Form Actions <i>(Use this to test a Form Action on Sveltekit)</i>:</p>
-<form method="POST" enctype="multipart/form-data" use:enhance={onEnhance}>
-    <input name="fileUpload" type="file" />
-    <button type="submit">SUBMIT</button>
-</form>
+<ul>
+    <li>
+        <p>API <i>(Use this to test a POST request on an API)</i>:</p>
+        <input on:change={onChange} class="input" type="file" />
+    </li>
+    <li>
+        <p>
+            Form Actions <i>(Use this to test a Form Action on Sveltekit)</i>:
+        </p>
+        <form
+            method="POST"
+            enctype="multipart/form-data"
+            use:enhance={onEnhance}
+        >
+            <input name="fileUpload" type="file" />
+            <button type="submit">SUBMIT</button>
+        </form>
+    </li>
+</ul>
 
 <style>
     .success {
