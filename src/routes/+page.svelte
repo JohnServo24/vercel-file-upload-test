@@ -28,13 +28,18 @@
             body: formData,
         });
 
-        if (!resRaw.ok) {
+        if (!resRaw.ok || resRaw.status === 413) {
             message = "Not success";
         }
 
         message = "Success";
     };
 </script>
+
+<p>
+    FILE UPLOAD TEST BY JC SERVO (DONT MIND THE DESIGN THIS IS JUST FOR TESTING
+    PURPOSES)
+</p>
 
 {#if message !== ""}
     <p>Message: {message}</p>
